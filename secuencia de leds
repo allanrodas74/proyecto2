@@ -1,0 +1,15 @@
+import pyfirmata2  
+pausa=200
+PORT=pyfirmata2.Arduino.AUTODETECT
+board = pyfirmata2.Arduino(PORT) 
+pinLed=2
+if pinLed>=1 and pinLed<=10: 
+    board.digital[pinLed].write(1)
+    pass
+    board.digital[pinLed].write(0)
+    pass
+if pinLed<=10 and pinLed>=1:
+    board.digital[pinLed].write(1)
+    pass
+    board.digital[pinLed].write(0)
+    pass
